@@ -1,0 +1,36 @@
+﻿[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "image-diff"
+version = "0.3.0"
+description = "成分表图片对比：提取成分，找出新增 / 删除。离线、免费。"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "image-diff contributors" }]
+keywords = ["image-diff", "ocr", "ingredient", "rapidocr", "paddleocr", "offline"]
+dependencies = [
+    "Pillow>=9.0",
+    "numpy>=1.20",
+]
+
+[project.optional-dependencies]
+gui = ["customtkinter>=6.0", "tkinterdnd2>=0.4"]
+ocr = ["rapidocr_onnxruntime>=1.4"]
+paddleocr = ["paddlepaddle>=3.0", "paddleocr>=3.0"]
+
+[project.scripts]
+image-diff = "cli:main"
+image-diff-gui = "gui:main"
+
+[project.urls]
+Homepage = "https://github.com/your-name/image-diff"
+Repository = "https://github.com/your-name/image-diff"
+
+[tool.setuptools]
+py-modules = ["cli", "gui"]
+
+[tool.setuptools.packages.find]
+include = ["image_diff*"]

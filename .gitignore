@@ -1,0 +1,26 @@
+﻿# 生成物
+out/
+examples/out/
+examples/out_*/
+examples/_*/
+examples/out_cli/
+examples/out_gui/
+examples/out_ing/
+
+# 本地安装的依赖（沙盒 / 离线用，不提交）
+.deps/
+.pip_tmp/
+.venv/
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+build/
+dist/
+*.egg-info/
+
+# 大模型生成的文档和缓存（防止路径过长报错）
+.bailian/
+.agents-anywhere/
+.ai_completion/
